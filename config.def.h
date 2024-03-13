@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
+#include "colors.h"
 /*
  * appearance
  *
@@ -96,32 +97,30 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	[0]=BLACK,
+	[1]=RED,
+	[2]=GREEN,
+	[3]=YELLOW,
+	[4]=BLUE,
+	[5]=MAGENTA,
+	[6]=CYAN,
+	[7]=DARKGREY,
+	[8]=LIGHTGREY,
+	[9]=RED_ALT,
+	[10]=GREEN_ALT,
+	[11]=YELLOW_ALT,
+	[12]=BLUE_ALT,
+	[13]=MAGENTA_ALT,
+	[14]=CYAN,
+	[15]=FOREGROUND,
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	[256]=FOREGROUND,
+	[257]=BACKGROUND,
+	[258]=LIGHTERGREY, /* default foreground colour */
+	[259]=DARKGREY, /* default background colour */
 };
 
 
